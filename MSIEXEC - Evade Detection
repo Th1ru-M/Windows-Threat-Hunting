@@ -11,3 +11,4 @@ Detection:
 2.Command execution and arguments passed to msiexec.exe using EDR solutions.
 3.Look for the HTTP useragents with msiexec in the network recorders or the proxy logs.
 4.Look for suspicious process in the system with parent process as MSIEXEC.
+5.Look for Windows event id 4688 and search this utility names as a keyword
