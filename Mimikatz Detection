@@ -1,0 +1,21 @@
+Mimikatz provides a wealth of tools for collecting  Windows credentials on Windows systems, including retrieval
+of cleartext passwords, Lan Manager hashes, and NTLM hashes, certificates, and Kerberos tickets. Mimikatz provides interactive shell 
+and commands can be executed. Mimikatz can also be associated with Meterpreter shell.
+
+Detections:
+1.Sweep prefetch directories with the keyword mimikatz.
+
+2.Look on Windows event id 4688 (process creation) and filter with Mimikatz key word.
+
+3.Look for the following arguments in the opened shell process. EDR solution will hook the shell opened and records the executions.
+  Sweep the EDR logs with following keyword.
+  privilege::debug
+  sekurlsa::logonpasswords
+  sekurlsa
+  
+4.Look for Windows event id  4703(token rights adjusted) and filter with keyword mimikatz
+Token Right Adjusted: Enabled Privileges: SeDebugPrivilege / Process Name: mimikatz.exe
+
+5.Look for Windows event id 4656 (Object handle request and filter with (("%lsass.exe" AND Access_Mask=="0x143A") OR (Process_Name LIKE "%shell.exe" AND 
+Object_Name LIKE "%lsass.exe" AND Access_Mask=="0x1410")
+
