@@ -8,7 +8,7 @@ mshta evil[.]hta
 
 Detection:
 1.Look for MSHTA.exe prefetch files and Parsing the prefetch will provide the executed file. 
-2.Command execution and arguments passed to mshta.exe using EDR solutions.
+2.Command execution and arguments passed to mshta.exe using EDR solutions.Look for Java script or cscript arguments passed with MSHTA.
 3.Look for the HTTP useragents with mshta in the network recorders or the proxy logs.
 4.Look for suspicious process in the system with parent process as MSHTA.
 
