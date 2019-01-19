@@ -1,0 +1,6 @@
+Whenever a new service is created a windows will trigger event id 7045. Sweep for the below event across the computer to detect any malicious 
+service running in the computer.
+
+Detection:
+Windows Event id 7045
+
