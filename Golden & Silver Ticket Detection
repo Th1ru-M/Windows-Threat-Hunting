@@ -1,0 +1,24 @@
+Golden ticket is a forged Ticket Granting Ticket valid for gaining access to any Kerberos service, the silver
+ticket is a forged TGS. This means the Silver Ticket scope is limited to whatever service is
+running on a specific server. While a Golden ticket is encrypted/signed with the domain Kerberos service account (KRBTGT),
+a Silver Ticket is encrypted/signed by the service account (computer account credential
+extracted from the computer’s local SAM or service account credential).
+If an attacker manages to collect the NTLM hash of krbtgt account or the Service Account, this may be used by Mimikatz or any password 
+dumping tools to generate a ‘Golden Ticket’ that may be used to elevate the privileges of any session from any system.
+
+Detection:
+1. Track the mimikatz detection techniques from the following link.
+https://github.com/Th1ru-M/Threat-Hunting/blob/master/Mimikatz%20Detection
+
+2.Track thee Password Dumping tools detection techniques in the system from the following link.
+<>
+
+3.Once the adversary generated a golden or silver ticket after dumping the KRBGT or service accounts , its tough to detect it.
+  After the changing the KRBGT password twice , we have Windows event id that track TGT integrity failures.
+event id 4769
+Status Code :0x1F: Integrity check on decrypted field failed
+
+4.Look for the following arguments in the opened shell process. EDR solution will hook the shell opened and records the executions.
+  Sweep the EDR logs with following keyword.
+  kerberos::golden 
+  privilege::debug
