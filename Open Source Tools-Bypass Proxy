@@ -1,0 +1,13 @@
+Adversaries or unethical users may use some commercial or opensource proxy evasion tools to access internet. Some of the tools
+like ultrasurf,tor,uproxy,psiphon etc. Sweep the prefetch files over the Windows machine and identify the suspicious machines running these softwares. 
+
+
+Detection Keyword in the prefetch directories:
+("ultrasurf")) OR ("uproxy") OR ("kproxy") OR ("tor") OR ("bypass") OR ("psiphon") OR ("safeip")) 
+ ("proxy")))
+ 
+ Detection Method:
+ 1.Look for the prefetch files with the above keywords.
+2.Look for the HTTP useragents with these toolnames in the network recorders or the proxy logs.
+3.Look for suspicious process in the system with parent process as these tools.
+4. Look for Windows event id 4688 and search this tool names as a keyword
