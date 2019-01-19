@@ -1,8 +1,0 @@
-Sweep the registry key value data to look for services loaded from image path on downloads or Temp Directories
-
-Registry Path
-HKLM\SYSTEM\CurrentControlSet\Services\
-
-Reg key value Name : image Path
-
-Detection key words: Temp or Download or !system32
