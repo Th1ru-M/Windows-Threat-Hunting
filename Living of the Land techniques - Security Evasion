@@ -8,6 +8,7 @@ certutil
 Regsvr32
 MSHTA
 Powershell
+msiexec
 curl
 
 Usage :
