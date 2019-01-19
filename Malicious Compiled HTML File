@@ -6,3 +6,4 @@ Detection:
 1.Look for HH.exe prefetch files and Parsing the prefetch will provide the executed CHM file. 
 2.Command execution and arguments passed to HH.exe using EDR solutions.
 3.Suspicious process under the parent process HH.exe
+4.Look for Windows event id 4688 and search this utility name as a keyword
