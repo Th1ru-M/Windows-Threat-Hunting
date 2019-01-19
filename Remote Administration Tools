@@ -1,0 +1,4 @@
+Sweep the prefetch directories of the Windows machines and identify the executed known remote administartion tools.
+
+("telnet")) OR ("ssh") OR ("securecrt") OR ("teamviewer") OR ("dameware") OR ("ammyadmin") OR ("logmein") OR ("cygwin")
+OR ("putty") or ("Ncat") or ("Netcat")
