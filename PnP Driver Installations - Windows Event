@@ -1,0 +1,5 @@
+USB drives or PnP devices connected to the computer will install the drivers in the initial period. Below windows events will 
+be triggered in the event viewer when the PnP devices are connected.
+
+Detection:
+Event ID - 6416,20001,20003
