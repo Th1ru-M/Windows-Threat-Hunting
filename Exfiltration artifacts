@@ -1,0 +1,11 @@
+Adversaries or unethical users  may  exfiltrate data through the use of automated processing or Scripting or commercial tools or cloud drives
+after being gathered during Collection.
+
+Detection Keyword:
+("nc.exe") OR ("nct.exe") OR ("netcat") OR ("ftp") OR ("winscp") OR ("scp") OR ("bits") OR ("filezilla") OR ("curl") OR ("googledrive")
+ OR ("box") OR ("ncat") OR ("sftp") OR ("tftp"))
+ 
+1.Look for  prefetch files with the above mentioned keywords.
+2.Look for Scheduled task created to run these tools.
+3.Look for Windows event id 4688 and search for the above keyword . Process created by these tools are tracked through 
+  4688 event id.
