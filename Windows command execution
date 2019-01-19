@@ -1,0 +1,7 @@
+Sweep the prefetch directories in the Windows machines to identify the commands executed. Adversaries will use these commands for various reasons 
+like reconnaissance, laterally move or privilege escalation.
+
+Detection for the below keywords in prefetch directory:
+
+("systeminfo") OR ("quser") OR ("net.exe") OR ("net1.exe") OR ("whoami") OR ("qwinsta") OR ("nbtstat") OR ("psexec") OR ("dnscmd") 
+OR ("schtasks") OR ("netstat") OR ("takeown.exe") OR ("cacls.exe") OR ("\at.exe") OR ("regedit")) or("WMI")
