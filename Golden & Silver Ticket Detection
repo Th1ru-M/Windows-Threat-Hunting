@@ -10,7 +10,7 @@ Detection:
 https://github.com/Th1ru-M/Threat-Hunting/blob/master/Mimikatz%20Detection
 
 2.Track thee Password Dumping tools detection techniques in the system from the following link.
-<>
+https://github.com/Th1ru-M/Threat-Hunting/blob/master/Detection%20of%20Password%20Dumping%20Tools
 
 3.Once the adversary generated a golden or silver ticket after dumping the KRBGT or service accounts , its tough to detect it.
   After the changing the KRBGT password twice , we have Windows event id that track TGT integrity failures.
