@@ -1,10 +1,9 @@
 Golden ticket is a forged Ticket Granting Ticket valid for gaining access to any Kerberos service, the silver
-ticket is a forged TGS. This means the Silver Ticket scope is limited to whatever service is
-running on a specific server. While a Golden ticket is encrypted/signed with the domain Kerberos service account (KRBTGT),
-a Silver Ticket is encrypted/signed by the service account (computer account credential
-extracted from the computer’s local SAM or service account credential).
-If an attacker manages to collect the NTLM hash of krbtgt account or the Service Account, this may be used by Mimikatz or any password 
-dumping tools to generate a ‘Golden Ticket’ that may be used to elevate the privileges of any session from any system.
+ticket is a forged TGS. This means the Silver Ticket is limited to whatever service is running on a specific server. 
+Golden ticket is encrypted & signed with the domain Kerberos service account (KRBTGT), a Silver Ticket is encrypted & signed 
+by the service account (the computer’s local SAM or service account credential).
+If an attacker manages to collect the NTLM hash of krbtgt account or the Service Account, using Mimikatz or any password 
+dumping tools & can generate a ‘Golden Ticket’ that may be used to elevate the privileges of any session from any system.
 
 Detection:
 1. Track the mimikatz detection techniques from the following link.
