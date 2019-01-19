@@ -1,0 +1,5 @@
+Adversaries may clear the Windows audit logs to clear its footpath.Whenver audit logs are cleared , Windows trigger event 
+id 104 or 1102 or 517.Look for these event ids in the machine and start your analysis.
+
+Detection:
+Event ID - 104,1102,517
