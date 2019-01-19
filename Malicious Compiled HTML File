@@ -1,0 +1,8 @@
+Compiled HTML File (CHM) are commonly Microsoft help files. These file will be a compiled HTML files that includes documents , image , scripts etc.
+Hackers will abuse these files to embed malicious payload with CHM files. CHM files can be executed by HH.exe , which is a Microsoft windows utility.
+Adversaries use this techniques to evade AV or application blacklisting techniques.
+
+Detection:
+1.Look for HH.exe prefetch files and Parsing the prefetch will provide the executed CHM file. 
+2.Command execution and arguments passed to HH.exe using EDR solutions.
+3.Suspicious process under the parent process HH.exe
