@@ -13,5 +13,7 @@ Detection:
 1.Look for certutil.exe prefetch files and Parsing the prefetch will provide the downloaded file. 
 2.Command execution and arguments passed to certutil.exe using EDR solutions.
 3.Look for the HTTP useragents with certutil in the network recorders or the proxy logs.
+4.Look for Windows event id 4688 and search this utility names as a keyword
+
 
 
