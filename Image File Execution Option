@@ -1,0 +1,11 @@
+Image File Execution Options (IFEO) are used for debugging. IFEO settings are stored in the Windows registry. This feature enables the developer to 
+to attach a debugger to the known executables. malwares exploit this feature for its persistence. For example  by adding a debugger to the  
+calc.exe to execute evil.exe, whenever the user opens calc.exe , evil.exe will be executed.
+
+REG ADD "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\calc.exe" /v Debugger /d "C:/evil.exe"
+
+Detection:
+  Sweep all the executables under below mentioned registry path  "Image File Execution Options" and look for "debugger" key name.
+  
+Registry Path:
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options
