@@ -1,0 +1,108 @@
+Cloud storage is a technology that makes it possible for users to upload/download  data to the web, allowing for
+instant accessibility and the ability to share data anytime.Adversaries or unethical users may use the cloud storages to transfer data. These storage tools require a client to run in the 
+windows machine. We can hunt for the artifacts of these clients in the windows machine.
+
+Cloud storage Clients:
+DropBox,Google Drive,Microsoft skydrive,pcloud,owncloud,icloud
+
+
+Google Drive:
+1.RegKeyPath
+HKLM/Software\classes\installer\products\*
+Keyname : product name 
+Valuedata: "Google drive" or gsync.msi
+
+HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\bam\UserSettings\*
+HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services
+Keyname with keyword GDrive or Google Drive  
+
+2.Look for directories with Keywords GDrive or Google Drive .
+%userprofile%/Appdata/roaming/
+%userprofile%/Appdata/local/
+
+3. Sweep for Gsync.msi file
+
+4. Sweep for prefetch directory for the prefetch file with name Gdrive or Google Drive .
+
+5.Look for Service creation event id 7045 and filter with keyword GDrive or Google Drive
+
+----------------------------------------------------------------------------------------
+Dropbox
+1.RegKeyPath
+HKLM/Software\classes\installer\products\*
+Keyname : product name 
+Valuedata: "Dropbox"
+
+2.Sweep the regkeypath and  find the entry for Dropboxclient installation
+HKEY_CURRENT_USER/NTUSER.DAT/SOFTWARE/Dropbox
+
+HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\bam\UserSettings\*
+HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services
+
+Keyname with keyword dropbox
+
+
+3.Look for directories with Keywords dropbox .
+%userprofile%/Appdata/roaming/
+%userprofile%/Appdata/local/
+
+4. Sweep for config.db and filecache.db files under the installed paths 
+
+5. Sweep for prefetch directory for the prefetch file with name Dropbox .
+
+6.Look for Service creation event id 7045 and filter with keyword dropbox.
+
+----------------------------------------------------------------------------------------
+Pcloud
+1.RegKeyPath
+HKLM/Software\classes\installer\products\*
+Keyname : product name 
+Valuedata: "Pcloud"
+
+2.Sweep the regkeypath and  find the entry for Pcloud client installation
+HKEY_CURRENT_USER/NTUSER.DAT/SOFTWARE/Pcloud
+
+HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\bam\UserSettings\*
+HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services
+
+Keyname with keyword pcloud
+
+3.Look for directories with Keywords pcloud .
+%userprofile%/Appdata/roaming/
+%userprofile%/Appdata/local/
+
+4. Sweep for data.dbb files under the installed paths 
+
+5. Sweep for prefetch directory for the prefetch file with name pcloud .
+
+6.Look for Service creation event id 7045 and filter with keyword pcloud.
+
+-----------------------------------------------------------------------------------------
+
+owncloud
+
+1.RegKeyPath
+HKLM/Software\classes\installer\products\*
+Keyname : product name 
+Valuedata: "owncloud"
+
+2.Sweep the regkeypath and  find the entry for owncloud client installation
+HKEY_CURRENT_USER/NTUSER.DAT/SOFTWARE/owncloud
+
+HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\bam\UserSettings\*
+HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services
+
+Keyname with keyword owncloud
+
+3.Look for directories with Keywords owncloud .
+%userprofile%/Appdata/roaming/
+%userprofile%/Appdata/local/
+
+4. Sweep for thebelow  files under the installed paths.
+owncloudsync & csync_journal.db
+
+5. Sweep for prefetch directory for the prefetch file with name owncloud .
+
+6.Look for Service creation event id 7045 and filter with keyword owncloud.
+
+
