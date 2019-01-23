@@ -13,3 +13,4 @@ Detection:
 2.Command execution and arguments passed to certutil.exe using EDR solutions.
 3.Look for Windows event id 4688 and search this utility names as a keyword alond with below syntax 
 "wmic os get /FORMAT:"http:/"
+4. Look for http request for file/page ending with XSL from proxy log or Network recorder.
