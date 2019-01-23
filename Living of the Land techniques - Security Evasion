@@ -34,4 +34,8 @@ Detection:
 1.Look for these utilities prefetch files and Parsing the prefetch will provide the executed file. 
 2.Command execution and arguments passed to these utilities using EDR solutions.
 3.Look for the HTTP useragents with regsvr32/mshta/certuril in the network recorders or the proxy logs.
+Certutil - useragent as CertUtil 
+MSIEXEC - Windows Installer
+WMIC -Http request for file/page ending with XSL from proxy log or Network recorder
+Powershell-Mozilla/5.0 (Windows NT; Windows NT 6.3; en-US) WindowsPowerShell/4.0
 4.Look for suspicious process in the system with parent process as these utilities.
