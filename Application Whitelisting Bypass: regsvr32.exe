@@ -14,7 +14,7 @@ Detection:
 1.Look for regsvr32.exe prefetch files and Parsing the prefetch will provide the executed file. 
 2.Command execution and arguments passed to regsvr32.exe using EDR solutions.
 3.Look for suspicious process in the system with parent process as regsvr32.
-4. Hunt for Windows event id 4688 and filter teh command arguments with following filter
+4. Hunt for Windows event id 4688 and filter the command arguments with following filter
 regSvr32 /s /n /u /i:http
 
 Note: This utility invokes default HTTP useragent based on your system settings.
