@@ -11,6 +11,6 @@ Detection:
 Detection:
 1.WMI for certutil.exe prefetch files and Parsing the prefetch will provide the downloaded file. 
 2.Command execution and arguments passed to certutil.exe using EDR solutions.
-3.Look for Windows event id 4688 and search the process command arguments with this utility names as a keyword alond with below syntax 
+3.Look for Windows event id 4688 and search the process command arguments with this utility names as a keyword along with below syntax 
 "wmic os get /FORMAT:"http:/"
 4. Look for http request for file/page ending with XSL from proxy log or Network recorder.
