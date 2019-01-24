@@ -39,3 +39,8 @@ MSIEXEC - Windows Installer
 WMIC -Http request for file/page ending with XSL from proxy log or Network recorder
 Powershell-Mozilla/5.0 (Windows NT; Windows NT 6.3; en-US) WindowsPowerShell/4.0
 4.Look for suspicious process in the system with parent process as these utilities.
+5.Look for event id 4688 and its process command argument to track these exceutable with the above syntax.
+
+Note: Auditing policy for process tracking have to be enabled to trigger 4688 event id and in Advanced Audit Configuration ,
+  Detailed Tracking have to be enabled for recording process command arguments.
+
