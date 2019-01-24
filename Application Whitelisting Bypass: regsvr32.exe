@@ -13,6 +13,10 @@ It doesn’t have to be .sct. There will be no artifacts left in registry if thi
 Detection:
 1.Look for regsvr32.exe prefetch files and Parsing the prefetch will provide the executed file. 
 2.Command execution and arguments passed to regsvr32.exe using EDR solutions.
-3.Look for the HTTP useragents with regsvr32 in the network recorders or the proxy logs.
-4.Look for suspicious process in the system with parent process as regsvr32.
+3.Look for suspicious process in the system with parent process as regsvr32.
+4. Hunt for Windows event id 4688 and filter teh command arguments with following filter
+regSvr32 /s /n /u /i:http
+
+Note: This utility invokes default HTTP useragent based on your system settings.
+Mozilla/4.0 (compatible; MSIE X.0; Windows NT 6.2; Win64; x64; Trident/7.0; .NET4.0E; .NET4.0C)
 
