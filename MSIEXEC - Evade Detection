@@ -13,3 +13,8 @@ Detection:
 4.Look for suspicious process in the system with parent process as MSIEXEC.
 5.Look for Windows event id 1040,1042(Application log) . Search this utility names as a keyword under provider or source in the event
   and filter for keyword with "http://".
+6.Look for Windows event id 4688 and search the process command arguments with this utility names as a keyword along with below syntax 
+  msiexec /q /i http
+  
+  Note:Auditing policy for process tracking have to be enabled to trigger 4688 event id and in Advanced Audit Configuration ,
+  Detailed Tracking have to be enabled for recording process command arguments.
