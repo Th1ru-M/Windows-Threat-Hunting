@@ -1,6 +1,6 @@
-Image File Execution Options (IFEO) are used for debugging. IFEO settings are stored in the Windows registry. This feature enables the developer to 
-to attach a debugger to the known executables. malwares exploit this feature for its persistence. For example  by adding a debugger to the  
-below  to execute evil.exe, whenever the below utilities are triggered , evil.exe will be executed.
+Image File Execution Options (IFEO) are used for debugging & IFEO settings are stored in the Windows registry. This feature enables the developer to 
+to attach a debugger to the known executables. Malwares exploit this feature for its persistence. For example  by adding a debugger to the  
+below executables , whenever the below utilities are triggered , malcious executable will be executed.
 Windows Utilities:
 sethc.exe
 magnify.exe
