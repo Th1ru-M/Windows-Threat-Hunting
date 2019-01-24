@@ -20,3 +20,7 @@ regSvr32 /s /n /u /i:http
 Note: This utility invokes default HTTP useragent based on your system settings.
 Mozilla/4.0 (compatible; MSIE X.0; Windows NT 6.2; Win64; x64; Trident/7.0; .NET4.0E; .NET4.0C)
 
+Note: Auditing policy for process tracking have to be enabled to trigger 4688 event id and in Advanced Audit Configuration ,
+  Detailed Tracking have to be enabled for recording process command arguments.
+
+
