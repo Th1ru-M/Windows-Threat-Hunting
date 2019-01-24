@@ -12,6 +12,8 @@ Detection:
 3.Look for suspicious process in the system with parent process as MSHTA.
 4.Look for Windows event id 4688 and search the process command arguments with this utility names as a keyword along with below syntax 
   mshta.exe http
+  
+
 
 
 
