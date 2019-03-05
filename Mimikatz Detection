@@ -35,5 +35,16 @@ TOKEN::Elevate /domainadmin
 Token Right Adjusted: Enabled Privileges: SeDebugPrivilege / Process Name: mimikatz.exe
 
 5.Look for Windows event id 4656 (Object handle request and filter with (("%lsass.exe" AND Access_Mask=="0x143A") OR (Process_Name LIKE "%shell.exe" AND 
-Object_Name LIKE "%lsass.exe" AND Access_Mask=="0x1410")
+Object_Name LIKE "%lsass.exe" AND Access_Mask=="0x1410").
+
+6. Look for powershell logs for the below Windows call.
+GetDelegateForFunctionPointer
+System.Reflection.AssemblyName
+System.Reflection.Emit.AssemblyBuilderAccess
+System.Management.Automation.WindowsErrorReporting
+MiniDumpWriteDump
+TOKEN_IMPERSONATE
+TOKEN_DUPLICATE
+TOKEN_ADJUST_PRIVILEGES
+TOKEN_PRIVILEGES
 
