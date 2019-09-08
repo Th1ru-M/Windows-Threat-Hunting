@@ -9,7 +9,7 @@ XSL script (eXtensible Stylesheet Language). WMI can invoke javascript or VBscri
 
 Detection:
 Detection:
-1.WMI for certutil.exe prefetch files and Parsing the prefetch will provide the downloaded file. 
+1.WMI for WMIC.exe prefetch files and Parsing the prefetch will provide the downloaded file. 
 2.Command execution and arguments passed to certutil.exe using EDR solutions.
 3.Look for Windows event id 4688 and search the process command arguments with this utility names as a keyword along with below syntax 
 "wmic os get /FORMAT:"http:/"
