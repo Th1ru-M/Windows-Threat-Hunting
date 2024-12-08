@@ -2,7 +2,7 @@ Adversaries or unethical users  may  exfiltrate data through the use of automate
 after being gathered during Collection.
 
 Detection Keyword:
-("nc.exe") OR ("nct.exe") OR ("netcat") OR ("ftp") OR ("winscp") OR ("scp") OR ("bits") OR ("filezilla") OR ("curl") OR ("googledrive")
+("nc.exe") OR ("nct.exe") OR ("netcat") OR ("ftp") OR ("winscp") OR ("scp") OR ("bits") OR ("filezilla") OR ("curl") 
  OR ("box") OR ("ncat") OR ("sftp") OR ("tftp"))
  
 1.Look for  prefetch files with the above mentioned keywords.
